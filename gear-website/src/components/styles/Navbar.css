@@ -1,0 +1,40 @@
+.navbar-nav .nav-link {
+    color: white !important;
+  }
+  
+  .navbar {
+    border-bottom: 4px solid orange; /* Bottom border */
+  }
+  
+  .nav-link:hover {
+    background-color:orange; /* Hover effect */
+    border-radius: 30px;
+    margin-top: 5px;
+   
+   padding-top: 3px;
+   padding-bottom: 4px;
+   
+    color: black !important;
+  }
+/* Navbar.css */
+
+.navbar-transparent {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    border-bottom: none; /* Ensure no border when transparent */
+}
+
+.navbar-solid {
+    background-color: black !important;
+    transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    border-bottom: none; /* Ensure no border by default when solid black */
+}
+
+/* You might not need this class anymore as the border is handled inline */
+/* .navbar-black-with-orange-border {
+    background-color: black !important;
+    border-bottom: 2px solid orange;
+    transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+} */
+
+/* Other navbar styles */
