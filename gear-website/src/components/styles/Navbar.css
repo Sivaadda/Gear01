@@ -1,6 +1,9 @@
 .navbar-nav .nav-link {
     color: white !important;
   }
+  .logo{
+    width: 150px;
+  }
   
   .navbar {
     border-bottom: 4px solid orange; /* Bottom border */

@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import video1 from '../assets/videos/mainsection.mp4';
 import aboutus from '../assets/images/aboutus.jpg';
 import profilepic from '../assets/images/profilepic.png';
+import banner from '../assets/images/Designer.jpg';
 import Footer from './Footer';
 
 
@@ -75,10 +76,11 @@ function Home() {
                     <p>Our startup is at the forefront of innovation, developing cutting-edge robotics solutions to tackle the most challenging automation needs of today and tomorrow.</p>
                     <button className="btn btn-primary" onClick={() => scrollToSection(contactRef)}>Contact Us</button>
                 </div>
-                <video autoPlay muted loop className="video-background">
+                {/* <video autoPlay muted loop className="video-background">
                     <source src={video1} type="video/mp4" />
                     Your browser does not support the video tag.
-                </video>
+                </video> */}
+                  <img src={banner} className="video-background" />
             </div>
 
             <div ref={aboutRef} className="container-fluid" id='about'>

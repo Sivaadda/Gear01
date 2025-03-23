@@ -2,13 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'; // Importing social media icons
 import '../styles/Footer.css';
+import logo from '../assets/images/logo.png';
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-left">
-          <img src="path_to_your_logo.png" alt="Logo" className="footer-logo" />
+          <img src={logo} alt="Logo" className="footer-logo" />
           <p className="footer-company-info">My Website is dedicated to providing top-notch services and innovative solutions. Transforming the world with automation and technology.</p>
         </div>
         <div className="footer-right">

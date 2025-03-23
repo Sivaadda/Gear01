@@ -32,8 +32,9 @@ body {
 /* Video Section */
 .video-section {
     position: relative;
-    height: 75vh; /* Adjusted height to 75% of viewport height */
+    height: 100vh; /* Adjusted height to 75% of viewport height */
     overflow: hidden;
+
 }
 
 .video-background {
@@ -42,7 +43,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-color: black;
+    
     z-index: -1;
 }
 
