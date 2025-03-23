@@ -1,3 +1,4 @@
+// src/components/Footer.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'; // Importing social media icons
@@ -10,7 +11,7 @@ function Footer() {
       <div className="container">
         <div className="footer-left">
           <img src={logo} alt="Logo" className="footer-logo" />
-          <p className="footer-company-info">My Website is dedicated to providing top-notch services and innovative solutions. Transforming the world with automation and technology.</p>
+          <p className="footer-company-info">Committed to delivering exceptional services and cutting-edge solutions. Driving progress through automation and advanced technology.</p>
         </div>
         <div className="footer-right">
           <div className="footer-links">
@@ -26,17 +27,16 @@ function Footer() {
             </div>
           </div>
           <div className="footer-social">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
           </div>
         </div>
       </div>
       <div className="footer-paragraph">
-        <p>Transforming the world with innovation and technology.</p>
-        <p>© 2025 Gear. All rights reserved. 
-            </p>
+        <p>Empowering the future through innovation and technological excellence.</p>
+        <p>© 2025 Gear. All rights reserved.</p>
       </div>
     </footer>
   );

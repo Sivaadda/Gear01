@@ -71,11 +71,11 @@ function Home() {
                 scrollToContact={() => scrollToSection(contactRef)}
             />
             <div ref={homeRef} className="container-fluid video-section" id='home' style={{ paddingTop: '60px' }}> {/* Add padding to avoid overlap */}
-                <div className="video-overlay">
+                {/* <div className="video-overlay">
                     <h1>Revolutionizing Robotics for the Future</h1>
                     <p>Our startup is at the forefront of innovation, developing cutting-edge robotics solutions to tackle the most challenging automation needs of today and tomorrow.</p>
                     <button className="btn btn-primary" onClick={() => scrollToSection(contactRef)}>Contact Us</button>
-                </div>
+                </div> */}
                 {/* <video autoPlay muted loop className="video-background">
                     <source src={video1} type="video/mp4" />
                     Your browser does not support the video tag.
