@@ -209,42 +209,45 @@ function Home() {
                 )}
             </div>
 
-            <div ref={feedbackRef} className="container-fluid feedback-section" id='#feedback'>
-                <h2>Customer Feedback</h2>
-                <div className="row justify-content-center second-feedback ">
-                    <div className="col-md-3 feedback-box">
-                        <div className="feedback-content">
-                            <img src={profilepic} alt="Customer 1" className="feedback-image" />
-                            <div className="feedback-info">
-                                <h4>John Doe</h4>
-                                <p className="company">Tech Innovators Inc.</p>
-                            </div>
-                        </div>
-                        <p className="feedback">"Robotics Co. provided us with exceptional service. Their innovative solutions have transformed our business operations. Highly recommended!"</p>
-                    </div>
-                    <div className="col-md-3 feedback-box">
-                        <div className="feedback-content">
-                            <img src={profilepic} alt="Customer 2" className="feedback-image" />
-                            <div className="feedback-info">
-                                <h4>Jane Smith</h4>
-                                <p className="company">Automation Experts Ltd.</p>
-                            </div>
-                        </div>
-                        <p className="feedback">"The team at Robotics Co. is incredibly knowledgeable and supportive. Their robotics solutions are top-notch and have greatly improved our efficiency."</p>
-                    </div>
-                    <div className="col-md-3 feedback-box">
-                        <div className="feedback-content">
-                            <img src={profilepic} alt="Customer 3" className="feedback-image" />
-                            <div className="feedback-info">
-                                <h4>Michael Johnson</h4>
-                                <p className="company">FutureTech Solutions</p>
-                            </div>
-                        </div>
-                        <p className="feedback">"Working with Robotics Co. has been a game-changer for our company. Their expertise and dedication to customer satisfaction are unparalleled."</p>
-                    </div>
+            {/* Feedback section */}
+            <div ref={feedbackRef} className="container-fluid feedback-section" id="feedback">
+    <h2>Customer Feedback</h2>
+    <div className="row justify-content-center second-feedback">
+        <div className="col-9 col-md-5 col-lg-3 feedback-box">
+            <div className="feedback-content">
+                <img src={profilepic} alt="Customer 1" className="feedback-image" />
+                <div className="feedback-info">
+                    <h4>John Doe</h4>
+                    <p className="company">Tech Innovators Inc.</p>
                 </div>
             </div>
+            <p className="feedback">"Robotics Co. provided us with exceptional service. Their innovative solutions have transformed our business operations. Highly recommended!"</p>
+        </div>
+        <div className="col-9 col-md-5 col-lg-3 feedback-box">
+            <div className="feedback-content">
+                <img src={profilepic} alt="Customer 2" className="feedback-image" />
+                <div className="feedback-info">
+                    <h4>Jane Smith</h4>
+                    <p className="company">Automation Experts Ltd.</p>
+                </div>
+            </div>
+            <p className="feedback">"The team at Robotics Co. is incredibly knowledgeable and supportive. Their robotics solutions are top-notch and have greatly improved our efficiency."</p>
+        </div>
+        <div className="col-9 col-md-5 col-lg-3 feedback-box">
+            <div className="feedback-content">
+                <img src={profilepic} alt="Customer 3" className="feedback-image" />
+                <div className="feedback-info">
+                    <h4>Michael Johnson</h4>
+                    <p className="company">FutureTech Solutions</p>
+                </div>
+            </div>
+            <p className="feedback">"Working with Robotics Co. has been a game-changer for our company. Their expertise and dedication to customer satisfaction are unparalleled."</p>
+        </div>
+    </div>
+</div>          
 
+            
+            {/* Contact us section */}
             <div ref={contactRef} className="contact-us-container" id='#contact'>
                 <div className="contact-us-box">
                     <div className="contact-us-left">
