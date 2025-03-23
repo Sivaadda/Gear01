@@ -22,7 +22,7 @@
   align-items: flex-start;
   margin-bottom: 20px;
   width: 500px;
-  color:  rgb(51, 187, 51);
+  color:  #A7F432;
   
 }
 
@@ -56,7 +56,7 @@
 }
 
 .footer-links a {
-  color:rgb(51, 187, 51);
+  color:#A7F432;
   margin: 5px 0;
   text-decoration: none;
   transition: color 0.3s;
@@ -72,14 +72,14 @@
 }
 
 .footer-social a {
-  color: rgb(51, 187, 51);
+  color: #A7F432;
   margin: 0 10px;
   font-size: 1.5em; /* Size of social media icons */
   transition: color 0.3s;
 }
 
 .footer-social a:hover {
-  color:  rgb(51, 187, 51);
+  color:  #A7F432;
   text-decoration: underline;
 }
 
