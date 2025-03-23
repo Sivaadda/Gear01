@@ -32,9 +32,12 @@ body {
 /* Video Section */
 .video-section {
     position: relative;
-    height: 100vh; /* Adjusted height to 75% of viewport height */
+    height: 100vh; /* Occupy the full viewport height */
+    min-height: 400px; /* Ensure a minimum height */
     overflow: hidden;
-
+    display: flex; /* Enable flexbox for centering content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 .video-background {
@@ -43,8 +46,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
     background-color: black;
-    
     z-index: -1;
 }
 
@@ -52,36 +55,45 @@ body {
     position: relative;
     z-index: 1;
     color: white;
-    text-align: left; /* Align content to the left */
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
-    margin-top: 70px;
-    height: 50%;
-    padding-left: 200px; /* Add some left padding */
+    width: 80%; /* Adjust width for better responsiveness */
+    max-width: 1200px; /* Optional: set a maximum width */
+    margin: 0 auto; /* Center the overlay */
+    padding: 20px; /* Add some padding */
 }
 
 .video-overlay h1 {
     color: orange;
-    animation: fadeInDown 4s;
+    font-size: 2.5em; /* Adjust font size for responsiveness */
+    margin-bottom: 15px;
+    animation: fadeInDown 1s ease-out; /* Reduced animation duration */
 }
 
 .video-overlay p {
-    animation: fadeInUp 4s;
+    font-size: 1.2em; /* Adjust font size for responsiveness */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out; /* Reduced animation duration */
 }
 
 .video-overlay button {
-    width: 150px;
+    width: auto; /* Adjust width to content */
+    padding: 10px 25px;
     color: white;
     background-color: orange;
-    border: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
 }
 
 @keyframes fadeInDown {
     from {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
@@ -92,7 +104,7 @@ body {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -100,26 +112,49 @@ body {
     }
 }
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .video-section {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 80px 0; /* Add vertical padding */
+    }
+
+    .video-overlay {
+        width: 95%;
+        padding: 15px;
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .video-overlay h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .video-overlay p {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .video-overlay button {
+        font-size: 0.9em;
+        padding: 8px 20px;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .video-overlay h1 {
+        font-size: 1.7em;
+    }
+
+    .video-overlay p {
+        font-size: 0.9em;
+    }
+}
 /* Why Choose Us Section */
 .why-choose-us-section {
-    background-color: orange;
-    padding: 50px 0;
     position: relative;
     overflow: hidden;
-    margin-top: 40px;
-}
-
-.image-container {
-    position: relative;
-    z-index: 2;
-}
-
-.why-choose-us-image {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    left: 70px; /* Adjust to control overlap */
-    top: 70px; /* Adjust to control vertical overlap */
 }
 
 .content-container {
@@ -127,7 +162,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0px 30px;
 }
 
 .content-container h2 {
@@ -151,39 +185,49 @@ body {
 }
 
 /* Service Section */
+/* Service Section */
 .service-section {
     background-color: #f5f5f5;
     color: #333; /* Text color */
-    padding: 50px 0;
+    padding: 50px 20px; /* Add some padding on the sides for smaller screens */
 }
 
 .left-column {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    margin-left: 90px;
+   
+    margin-left: auto; /* Remove fixed left margin for responsiveness */
+    margin-right: auto; /* Center the column */
+    max-width: 540px; /* Limit width for larger screens */
 }
 
 .left-column .content {
-    text-align: left;
+    text-align: center;
+    
+    width: 100%; /* Make content take full width of its container */
 }
 
 .service-section .tagline {
-    color: orange; /* Blue for emphasis */
-    font-size: 1.2rem;
+    color: green; /* Blue for emphasis */
+    font-size: 1rem; /* Adjust font size for smaller screens */
     margin-bottom: 10px;
 }
 
 .service-section .heading {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    margin-bottom: 15px;
+   
 }
 
 .service-section .description {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    line-height: 1.4; /* Adjust line height for better readability */
     color: #555;
+    width: 100%; /* Make description responsive */
+    /* Limit maximum width */
+    
 }
 
 .right-column {
@@ -191,33 +235,36 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-left: 40px;
+    margin-left: auto; /* Remove fixed left margin */
+    margin-right: auto; /* Center the column */
+    max-width: 540px; /* Limit width for larger screens */
 }
 
 .scrollable-container {
     padding: 15px;
     width: 100%;
-    height: 400px; /* Fixed height for scroll area */
+    height: 300px; /* Adjust fixed height for scroll area on smaller screens */
     position: relative;
 }
 
 .arrow {
     /* Blue for arrows */
     border: none;
-    padding: 10px 15px;
+    padding: 8px 12px; /* Adjust padding for smaller screens */
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
     left: 50%; /* Center horizontally */
     transform: translateX(-50%);
+    font-size: 0.8rem; /* Adjust arrow size */
 }
 
 .up-arrow {
-    top: -20px; /* Positioned above the scroll area */
+    top: -15px; /* Adjust position for smaller screens */
 }
 
 .down-arrow {
-    bottom: -20px; /* Positioned below the scroll area */
+    bottom: -15px; /* Adjust position for smaller screens */
 }
 
 .service-rows {
@@ -233,7 +280,7 @@ body {
 .service-row {
     display: flex;
     align-items: center;
-    margin: 15px 0;
+    margin: 10px 0; /* Adjust margin for smaller screens */
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -244,22 +291,120 @@ body {
 }
 
 .icon {
-    font-size: 1.5rem;
-    margin-right: 15px;
+    font-size: 1.2rem; /* Adjust icon size for smaller screens */
+    margin-right: 10px; /* Adjust margin for smaller screens */
     /* Blue icons */
 }
 
 .text h4 {
-    font-size: 1.2rem;
-    margin: 0 0 5px;
-    color: #333; /* Dark gray headings */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    margin: 0 0 3px; /* Adjust margin for smaller screens */
+    color: green; /* Dark gray headings */
 }
 
 .text p {
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
     margin: 0;
     color: #555; /* Subtle gray text */
+    line-height: 1.3; /* Adjust line height for better readability */
 }
+
+/* Media query for larger screens (e.g., tablets and desktops) */
+@media (min-width: 768px) {
+    .service-section {
+        padding: 80px 0;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap; /* Enable wrapping for smaller screens */
+        justify-content: space-around; /* Distribute columns */
+        align-items: center;
+    }
+
+    .left-column,
+    .right-column {
+        width: calc(50% - 40px); /* Two columns with some spacing */
+        margin-left: 90px; /* Restore left margin for larger screens */
+       
+        max-width: none; /* Remove max width for two-column layout */
+    }
+
+    .right-column {
+        margin-left: 40px; 
+        /* Restore right column margin */
+    }
+
+    .service-section .tagline {
+        font-size: 1.2rem;
+    }
+
+    .service-section .heading {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .service-section .description {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .scrollable-container {
+        height: 400px; /* Restore larger height for scroll area */
+    }
+
+    .arrow {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+    .up-arrow {
+        top: -20px;
+    }
+
+    .down-arrow {
+        bottom: -20px;
+    }
+
+    .service-row {
+        margin: 15px 0;
+        padding: 10px;
+    }
+
+    .icon {
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
+
+    .text h4 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .text p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Media query for extra small screens */
+@media (max-width: 576px) {
+    .left-column,
+    .right-column {
+        width: 100%; /* Stack columns on extra small screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .right-column {
+        margin-left: auto;
+    }
+
+    .scrollable-container {
+        height: 250px; /* Further reduce height for very small screens */
+    }
+}
+
 
 /* Product Page */
 /* Base Styles */
@@ -487,9 +632,10 @@ body {
 
 .feedback-section {
     background-color: #f4f9f4; /* Light green background */
-    color: #347c17; /* Darker green text */
+    color: green; /* Darker green text */
     padding: 40px 20px; /* Adjust padding for smaller screens */
-    margin: 50px 15px; /* Adjust margin for smaller screens */
+    /* Adjust margin for smaller screens */
+    margin-bottom: 50px;
     text-align: center;
     border-radius: 8px; /* Optional: Add rounded corners */
 }
@@ -593,7 +739,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #A7F432; /* Bright green background */
+    background-color: rgb(135, 229, 135); /* Bright green background */
     color: #1E1E1E; /* Dark text */
     padding: 20px 40px;
      /* Increased padding for better spacing */
@@ -627,7 +773,7 @@ body {
     background-color: #1E1E1E; /* Dark button */
     border: 2px solid #1E1E1E; /* Dark border */
     padding: 12px 25px; /* Slightly larger button */
-    color: #A7F432; /* Bright green text on button */
+    color: green; /* Bright green text on button */
     border-radius: 5px; /* Less rounded for a modern look */
     cursor: pointer;
     font-weight: bold; /* Make the button text stand out */
@@ -635,9 +781,9 @@ body {
 }
 
 .contact-us-box button:hover {
-    background-color: #A7F432; /* Bright green background on hover */
+    background-color: green; /* Bright green background on hover */
     color: #1E1E1E; /* Dark text on hover */
-    border-color: #A7F432; /* Green border on hover */
+    border-color: green; /* Green border on hover */
 }
 
 

@@ -22,7 +22,7 @@
   align-items: flex-start;
   margin-bottom: 20px;
   width: 500px;
-  color:  #A7F432;
+  color: green;
   
 }
 
@@ -56,7 +56,7 @@
 }
 
 .footer-links a {
-  color:#A7F432;
+  color:green;
   margin: 5px 0;
   text-decoration: none;
   transition: color 0.3s;
@@ -72,14 +72,14 @@
 }
 
 .footer-social a {
-  color: #A7F432;
+  color: green;
   margin: 0 10px;
   font-size: 1.5em; /* Size of social media icons */
   transition: color 0.3s;
 }
 
 .footer-social a:hover {
-  color:  #A7F432;
+  color:  green;
   text-decoration: underline;
 }
 
