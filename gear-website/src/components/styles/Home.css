@@ -1,34 +1,4 @@
-/* Home.css */
 
-/* General Styles */
-body {
-    font-family: sans-serif; /* Example: Set a default font */
-    margin: 0; /* Remove default body margin */
-    padding: 0; /* Remove default body padding */
-    box-sizing: border-box; /* Ensure padding and border are within the element's set width and height */
-}
-/* Navbar.css */
-
-.navbar-transparent {
-    background-color: transparent !important;
-    transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
-    border-bottom: none; /* Ensure no border when transparent */
-}
-
-.navbar-solid {
-    background-color: black !important;
-    transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
-    border-bottom: none; /* Ensure no border by default when solid black */
-}
-
-/* You might not need this class anymore as the border is handled inline */
-/* .navbar-black-with-orange-border {
-    background-color: black !important;
-    border-bottom: 2px solid orange;
-    transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
-} */
-
-/* Other navbar styles */
 /* Video Section */
 .video-section {
     position: relative;

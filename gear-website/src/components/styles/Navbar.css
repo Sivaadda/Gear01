@@ -1,43 +1,60 @@
-.navbar-nav .nav-link {
-    color: white !important;
-  }
-  .logo{
-    width: 150px;
-  }
-  
-  .navbar {
-    border-bottom: 4px solid orange; /* Bottom border */
-  }
-  
-  .nav-link:hover {
-    background-color:orange; /* Hover effect */
-    border-radius: 30px;
-    margin-top: 5px;
-   
-   padding-top: 3px;
-   padding-bottom: 4px;
-   
-    color: black !important;
-  }
 /* Navbar.css */
 
-.navbar-transparent {
-    background-color: transparent !important;
-    transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
-    border-bottom: none; /* Ensure no border when transparent */
+.navbar {
+  /* Existing styles */
+  padding: 15px 20px; /* Adjust default padding */
 }
 
-.navbar-solid {
-    background-color: black !important;
-    transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
-    border-bottom: none; /* Ensure no border by default when solid black */
+.navbar-brand {
+  margin-right: 20px;
 }
 
-/* You might not need this class anymore as the border is handled inline */
-/* .navbar-black-with-orange-border {
-    background-color: black !important;
-    border-bottom: 2px solid orange;
-    transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
-} */
+.logo {
+  max-width: 180px;
+  height: auto;
+}
 
-/* Other navbar styles */
+.navbar-nav .nav-item {
+  margin-left: 15px;
+}
+
+.navbar-nav .nav-link {
+  padding: 8px 15px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding-left: 5px;
+    padding-right:  5px;
+  }
+
+  .navbar-brand {
+    margin-right:  5px;
+  }
+
+  .logo {
+    max-width: 100px;
+  }
+
+  .navbar-nav {
+    margin-left: auto; /* Ensure menu items are pushed correctly */
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 2px; /* Reduce spacing between items */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 8px 8px;
+    font-size: 0.9em; /* Adjust font size if needed */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 375px) { /* Or your target smallest breakpoint */
+  .logo {
+      max-width: 50px; /* Adjust as needed */
+  }
+
+}
