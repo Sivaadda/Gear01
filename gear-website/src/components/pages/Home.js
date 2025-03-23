@@ -161,54 +161,81 @@ function Home() {
                 </div>
             </section>
 
-            <div ref={productRef} className="container-fluid product-page" id='#product'>
-                {/* Centered Content */}
-                <div className="centered-content">
-                    <p className="tagline">Our Robotics Products</p>
-                    <h2 className="heading">Innovative Robotics Solutions</h2>
-                    <p className="description">
-                        Explore our range of cutting-edge robotics products designed to revolutionize industries and automate your workflows.
-                    </p>
-                </div>
+            <div ref={productRef} className="container-fluid product-page green-black-theme" id='#product'>
+    {/* Centered Content */}
+    <div className="centered-content">
+        <p className="tagline">Our Robotics Products</p>
+        <h2 className="heading">Innovative Robotics Solutions</h2>
+        <p className="description">
+            Explore our range of cutting-edge robotics products designed to revolutionize industries and automate your workflows.
+        </p>
+    </div>
 
-                {/* Horizontal Scroll for Product Cards */}
-                <div className='horizontal-scroll-container'>
-                    <div className="horizontal-scroll">
-                        {products.map((product) => (
-                            <div
-                                key={product.id}
-                                className="product-card"
-                                onClick={() => setActiveVideo(product.video)}
-                            >
-                                <video src={product.video} muted className="product-video"></video>
-                                <div className="product-info">
-                                    <h4>{product.name}</h4>
-                                    <p>
-                                        {product.info}{' '}
-                                        <a href="#" className="read-more-link">
-                                            Read more
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+    {/* Horizontal Scroll for Product Cards */}
+    <div className='horizontal-scroll-container'>
+        <div className="horizontal-scroll">
+            {products.map((product) => (
+                <div
+                    key={product.id}
+                    className="product-card"
+                    onClick={() => setActiveVideo(product.video)} // Keep this for potential video popup
+                >
+                    <img src={product.image} alt={product.name} className="product-image" />
+                    <div className="product-info">
+                        <h4>{product.name}</h4>
+                        <p>
+                            {product.info}{' '}
+                            {product.video && ( // Conditionally render a "Watch Video" link
+                                <a href="#" className="watch-video-link" onClick={(e) => {
+                                    e.preventDefault();
+                                    setActiveVideo(product.video);
+                                }}>
+                                    Watch Video
+                                </a>
+                            )}
+                            <a href="#" className="read-more-link">
+                                Read more
+                            </a>
+                        </p>
                     </div>
                 </div>
+            ))}
+        </div>
+    </div>
 
-                {/* Enlarged Video Popup */}
-                {activeVideo && (
-                    <div className="video-popup">
-                        <div className="popup-overlay" onClick={() => setActiveVideo(null)}></div>
-                        <div className="popup-content">
-                            <button className="close-btn" onClick={() => setActiveVideo(null)}>
-                                ✖
-                            </button>
-                            <video src={activeVideo} controls autoPlay className="popup-video"></video>
-                        </div>
-                    </div>
-                )}
+    {/* Enlarged Video Popup
+    {activeVideo && (
+        <div className="video-popup">
+            <div className="popup-overlay" onClick={() => setActiveVideo(null)}></div>
+            <div className="popup-content">
+                <button className="close-btn" onClick={() => setActiveVideo(null)}>
+                    ✖
+                </button>
+                <video src={activeVideo} controls autoPlay className="popup-video"></video>
             </div>
+        </div>
+    )} */}
 
+{activeVideo && (
+    <div className="video-popup">
+        <div className="popup-overlay" onClick={() => setActiveVideo(null)}></div>
+        <div className="popup-content">
+            <button className="close-btn" onClick={() => setActiveVideo(null)}>
+                ✖
+            </button>
+            <div className="video-container"> {/* New container for iframe */}
+                <iframe
+                    src={activeVideo} // Assuming activeVideo now holds the iframe URL
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allowFullScreen
+                ></iframe>
+            </div>
+        </div>
+    </div>
+)}
+</div>
             {/* Feedback section */}
             <div ref={feedbackRef} className="container-fluid feedback-section" id="feedback">
     <h2>Customer Feedback</h2>
