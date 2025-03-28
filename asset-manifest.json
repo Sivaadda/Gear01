@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.6784c18c.css",
-    "main.js": "/static/js/main.de604028.js",
-    "static/js/453.111a9096.chunk.js": "/static/js/453.111a9096.chunk.js",
-    "static/media/mainsection.mp4": "/static/media/mainsection.454bd91e4166539ece86.mp4",
-    "static/media/aboutus.jpg": "/static/media/aboutus.2207eff4a8041422cab2.jpg",
-    "static/media/Designer.jpg": "/static/media/Designer.7bf50dbe2ff8f94c354c.jpg",
-    "static/media/logo.png": "/static/media/logo.48022b66fecbe94d16cd.png",
-    "static/media/profilepic.png": "/static/media/profilepic.829bfd0b3259c369cafa.png",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.6784c18c.css.map": "/static/css/main.6784c18c.css.map",
-    "main.de604028.js.map": "/static/js/main.de604028.js.map",
-    "453.111a9096.chunk.js.map": "/static/js/453.111a9096.chunk.js.map"
+    "main.css": "/Sivaadda.github.io/static/css/main.6784c18c.css",
+    "main.js": "/Sivaadda.github.io/static/js/main.3f13ec81.js",
+    "static/js/453.111a9096.chunk.js": "/Sivaadda.github.io/static/js/453.111a9096.chunk.js",
+    "static/media/mainsection.mp4": "/Sivaadda.github.io/static/media/mainsection.454bd91e4166539ece86.mp4",
+    "static/media/aboutus.jpg": "/Sivaadda.github.io/static/media/aboutus.2207eff4a8041422cab2.jpg",
+    "static/media/Designer.jpg": "/Sivaadda.github.io/static/media/Designer.7bf50dbe2ff8f94c354c.jpg",
+    "static/media/logo.png": "/Sivaadda.github.io/static/media/logo.48022b66fecbe94d16cd.png",
+    "static/media/profilepic.png": "/Sivaadda.github.io/static/media/profilepic.829bfd0b3259c369cafa.png",
+    "static/media/logo.svg": "/Sivaadda.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Sivaadda.github.io/index.html",
+    "main.6784c18c.css.map": "/Sivaadda.github.io/static/css/main.6784c18c.css.map",
+    "main.3f13ec81.js.map": "/Sivaadda.github.io/static/js/main.3f13ec81.js.map",
+    "453.111a9096.chunk.js.map": "/Sivaadda.github.io/static/js/453.111a9096.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6784c18c.css",
-    "static/js/main.de604028.js"
+    "static/js/main.3f13ec81.js"
   ]
 }
