@@ -8,7 +8,7 @@ import logo from '../assets/images/logo.png';
 function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="container-fluid">
         <div className="footer-left">
           <img src={logo} alt="Logo" className="footer-logo" />
           <p className="footer-company-info">Committed to delivering exceptional services and cutting-edge solutions. Driving progress through automation and advanced technology.</p>

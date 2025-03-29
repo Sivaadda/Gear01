@@ -37,7 +37,7 @@ function Navbar({ scrollToHome, scrollToAbout, scrollToServices, scrollToProduct
                     transition: 'background-color 0.3s ease-in-out', // Optional smooth transition
                 }}
             >
-                <div className="container">
+                <div className="container-fluid">
                     <a className="navbar-brand" href="#home" onClick={scrollToHome}>
                         <img src={logo} alt="Logo" className='logo'/>
                     </a>

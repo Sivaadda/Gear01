@@ -8,7 +8,7 @@
   animation: slideUp 1s ease-in-out;
 }
 
-.footer .container {
+.footer .container-fluid {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -103,7 +103,7 @@
 
 /* Media query for medium to small screens */
 @media (max-width: 768px) {
-  .footer .container {
+  .footer .container-fluid {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
   }
